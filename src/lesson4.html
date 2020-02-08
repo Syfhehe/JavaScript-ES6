@@ -1,0 +1,44 @@
+<html>
+
+<head>
+	<title>Title</title>
+</head>
+
+<body>
+	<p>body</p>
+	<p>箭头函数 this 值</p>
+	<script>
+		const Jelly = {
+			name: 'Jelly',
+			hobbies: ['Coding', 'Sleeping', 'Reading'],
+			// printHobbies: function () {
+			// 	console.log(this)//cosnt Jelly
+			// 	this.hobbies.map(function (hobby) {
+			// 		console.log(this)//window
+			// 		console.log(`${this.name} loves ${hobby}`);					
+			// 	})
+			// }
+
+			//this 运行时赋值
+			//this 箭头函数是集成父作用域
+			printHobbies: function () {
+				this.hobbies.map(hobby => {
+					console.log(`${this.name} loves ${hobby}`);
+				})
+			}
+		}
+
+		function multiply(a, b) {
+			a = a || 5;
+			b = b || 3;
+			return a * b;
+		}
+
+		function multiply1(a=3, b=5) {
+			return a * b;
+		}
+
+	</script>
+</body>
+
+</html>

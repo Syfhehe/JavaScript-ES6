@@ -1,0 +1,36 @@
+<html>
+
+<head>
+	<title>Prototyal Inheritance Review</title>
+</head>
+
+<body>
+	<script>
+		Array.prototype.values = function () {
+			let i = 0;
+			let items = this;
+			return{
+				next(){
+					const done = i >=items.length;
+					const value = done? undefined : items[i++];
+					return{
+						value,
+						done
+					}
+				}
+			}
+		}
+		const colors = ['red','blue','green'];
+
+		function* listColor() {
+			yield 'red';
+			yield 'blue';
+			yield 'green';
+		}
+
+		const haha = listColor();
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<html>
+
+<head>
+	<title>Prototyal Inheritance Review</title>
+</head>
+
+<body>
+	<script>
+
+		class User {
+			constructor(name, email) {
+				this.name = name;
+				this.email = email;
+			}
+
+			info() {
+				console.log(`Hi I am ${this.name}`)
+			}
+
+			static description(){
+				console.log(`Hi I am description ${this.email}`)
+			}
+
+			set github(value){
+				this.githubName=value;
+			}
+			get github(){
+				return "aaaaa";
+			}
+
+		}
+
+		const b = new User('bb', 'vv');
+
+		// function User(name, email) {
+		// 	this.name = name;
+		// 	this.email = email;
+		// }
+
+		// User.prototype.info = function () {
+		// 	console.log(`Hi I am ${this.name}`)
+		// }
+
+		// const a = new User('aa', 'vv');
+		// const b = new User('bb', 'vv');
+
+	</script>
+</body>
+
+</html>

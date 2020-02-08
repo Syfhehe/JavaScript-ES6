@@ -1,0 +1,32 @@
+<html>
+
+<head>
+	<title>Title</title>
+</head>
+
+<body>
+	<p>body</p>
+	<p>箭头函数</p>
+	<script>
+		const numbers = [5, 6, 13, 0, 1, 18, 23];
+
+		const double = numbers.map(function (number) {
+			return number * 2;
+		});
+
+		const double2 = numbers.map((number, i) => {
+			return `${i} : ${number * 2}`;
+		});
+
+		//隐式返回
+		const double3 = numbers.map(number => number * 2);
+		
+		//匿名函数
+		const greet = name => {alert(`Hello ${name}`)}; 
+		greet('jeely');
+		console.log(greet);
+
+	</script>
+</body>
+
+</html>

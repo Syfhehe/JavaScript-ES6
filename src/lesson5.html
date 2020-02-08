@@ -1,0 +1,61 @@
+<html>
+
+<head>
+	<title>Title</title>
+	<style>
+		.highlight{
+			padding: 2px 5px;
+			background: #00adb5;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<p>body</p>
+	<p>模板字符串</p>
+
+	<script>
+		const person = 'jelly';
+		const age = 5;
+		const senctence = `${person} is ${age * 5}`;
+
+		const jelly = {
+			name: 'Jelly',
+			data: '2018-01-10',
+			todos: [
+				{ name: "Go to store", completed: false },
+				{ name: "Watch TV", completed: false },
+				{ name: "Run", completed: true }
+			]
+		}
+
+		const temple = `
+		<ul>
+			${jelly.todos.map(todo => `
+				<li>${todo.name} ${todo.completed ? '√' : '×'}</li>
+			`).join('')}
+		</ul>
+		`
+
+		
+
+
+		function highlight(strings, ...values) {
+			const highlighted = values.map(value => `<span class = 'highlight'>${value}</span>`);
+			let str = '';
+			strings.forEach((string, i) => {
+				str += `${string}${highlighted[i]||''}`;
+
+			});
+			return str;
+			return strings.reduce
+		}
+		const senctence1 = highlight`the ${person} now is ${age} already.`
+
+		document.body.innerHTML = senctence1;
+
+	</script>
+</body>
+
+</html>
